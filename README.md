@@ -136,8 +136,7 @@ light.errors
 light.save
 # => false
 
-# If you choose, you may do this within a single call. Calling #save!
-will raise an exception if there are errors.
+# If you choose, you may do this within a single call. Calling #save! Will raise an exception if there are errors.
 light.save!
 ```
 
