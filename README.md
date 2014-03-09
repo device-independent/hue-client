@@ -74,7 +74,7 @@ route.url_for
 route = routes.find('light')
 # => RouteObject (href: 'http://example.com/api/username/lights/{id}', rel: 'light')
 
-route.url_for(id: '1234)
+route.url_for(id: '1234')
 # => http://example.com/api/username/lights/123
 
 ```
