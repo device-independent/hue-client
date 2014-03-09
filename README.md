@@ -65,14 +65,14 @@ routes = bridge.routes
 
 # Find a route by it's link relationship
 route = routes.find('lights')
-=> RouteObject (href: 'http://example.com/api/username/lights', rel: lights')
+# => RouteObject (href: 'http://example.com/api/username/lights', rel: lights')
 
 route.url_for
 # => http://example.com/api/username/lights
 
 # Find an instance
 route = routes.find('light')
-=> RouteObject (href: 'http://example.com/api/username/lights/{id}', rel: 'light')
+# => RouteObject (href: 'http://example.com/api/username/lights/{id}', rel: 'light')
 
 route.url_for(id: '1234)
 # => http://example.com/api/username/lights/123
@@ -90,9 +90,11 @@ user = bridge.user.create('my-username')
 
 # You can also create and raise exceptions if errors occur
 user = bridge.user.create!('my-username')
+# => UserObject
 
 # Then you can find the user
 user = bridge.users.find_by_username('my-username')
+# => UserObject
 ```
 
 ### Querying
@@ -102,9 +104,11 @@ other attributes.
 ```ruby
 # Find all lights that match a name
 lights = bridge.lights.find_all_by_name('Kids Room')
+# => [LightObject, LightObject]
 
 # Find a light in the collection by assigned ID
 light = bridge.lights.find(1)
+# => LightObject
 ```
 
 ### Validations
@@ -152,7 +156,10 @@ light.changed?
 # => true
 
 light.changes
-# => [ChangeObject]
+# => [ChangeObject, ChangeObject]
+
+light.change_to(:brightness)
+# => ChangeObject
 ```
 
 ## API Limitations
