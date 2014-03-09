@@ -1,5 +1,7 @@
 # Philips Hue Client
 
+[![Build Status](https://travis-ci.org/nateklaiber/hue-client.png)](https://travis-ci.org/nateklaiber/hue-client)
+
 This gem allows you to utilize the [Philips Hue
 API](http://developers.meethue.com) to interact with your Hue Lights.
 
