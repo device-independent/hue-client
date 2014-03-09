@@ -27,7 +27,7 @@ Or install it yourself as:
 This gem will support access to all aspects of your Hue Lighting System:
 
 * **Portal/Bridge** management.
-* **User/Whitelist* management.
+* **User/Whitelist** management.
 * **Lights** management.
 * **Groups** management.
 * **Schedules** management.
