@@ -52,6 +52,27 @@ When connecting, the gem will utilize the _portal discovery_ endpoint to
 discover the bridges on your network. This configuration will be cached
 locally for later requests.
 
+### Request
+Once you have a connection manager in place you can make requests.
+
+```ruby
+# Get all lights
+Hue::Request.get('/lights')
+
+# Get all of the schedules
+Hue::Request.get('/schedules')
+
+# Create a new schedule
+Hue::Request.post('/schedules', MultiJson.dump(schedule_params))
+
+# Update an existing schedule
+Hue::Request.put('/schedules/1', MultiJson.dump(schedule_params))
+
+# Delete an existing schedule
+Hue::Request.delete('/schedules/1')
+```
+
+
 ### Routing
 The Hue API does not support
 [Hypermedia](http://en.wikipedia.org/wiki/HATEOAS). Instead of littering
