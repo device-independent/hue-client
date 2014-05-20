@@ -23,4 +23,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("rspec")
   spec.add_development_dependency("yard")
   spec.add_development_dependency("webmock")
+
+  spec.add_dependency("restless_router", "~> 0.0.3")
+  spec.add_dependency("terminal-table")
 end

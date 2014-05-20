@@ -13,3 +13,25 @@ task default: [:spec]
 
 desc "Document the library"
 task doc: [:yard]
+
+desc "List out the Routes"
+task :routes do
+  require 'hue/client'
+  require 'terminal-table'
+
+  row_display = ->(row) do
+    [row.name, row.path]
+  end
+
+  routes = Hue::Client.routes
+  rows   = routes.map { |r| row_display.call(r) }
+
+  table_attributes = {
+    :title    => 'Supported Hue Client Routes',
+    :headings => ['Route Name (Link Relationship)', 'URI Template'],
+    :rows     => rows
+  }
+
+  table = Terminal::Table.new(table_attributes)
+  puts table
+end
