@@ -14,6 +14,11 @@ task default: [:spec]
 desc "Document the library"
 task doc: [:yard]
 
+desc "Open an irb session preloaded with this library"
+task :console do
+  sh "irb -rubygems -I lib -I  extra -r hue/client"
+end
+
 desc "List out the Routes"
 task :routes do
   require 'hue/client'
