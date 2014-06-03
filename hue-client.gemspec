@@ -26,4 +26,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency("restless_router", "~> 0.0.3")
   spec.add_dependency("terminal-table")
+  spec.add_dependency("faraday")
+  spec.add_dependency("faraday_middleware")
 end
