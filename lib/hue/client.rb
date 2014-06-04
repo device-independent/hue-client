@@ -5,6 +5,8 @@ require "hue/client/version"
 require 'hue/client/configuration'
 require 'hue/client/connection'
 
+require 'hue/client/models'
+
 module Hue
   module Client
     def self.routes
