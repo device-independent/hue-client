@@ -16,6 +16,8 @@ require 'hue/client/models/light_state'
 require 'hue/client/models/light'
 require 'hue/client/models/lights'
 
+require 'hue/client/models/group_action'
+
 module Hue
   module Client
     def self.routes
