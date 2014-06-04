@@ -70,7 +70,7 @@ module Hue
         #
         # @return [Array] Float values of the X/Y coordinates
         def xy
-          @attributes.fetch('xy', [0, 0])
+          @attributes.fetch('xy', [0.0, 0.0])
         end
 
         # Indicates the color mode in which the light
