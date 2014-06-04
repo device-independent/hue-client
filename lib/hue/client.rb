@@ -1,3 +1,4 @@
+require 'time'
 require 'restless_router'
 
 require "hue/client/version"
