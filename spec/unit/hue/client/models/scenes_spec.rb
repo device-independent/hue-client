@@ -10,7 +10,7 @@ describe Hue::Client::Models::Scenes do
           "2",
           "3"
         ],
-          "name"=> "BlueStrip on 0"
+        "name"=> "BlueStrip on 0"
       },
       "8f92cd67ce-off-0"=> {
         "active"=> true,
@@ -53,6 +53,12 @@ describe Hue::Client::Models::Scenes do
 
       it "returns nil if no record is found" do
         expect(subject.find_by_id('notfound')).to be_nil
+      end
+    end
+
+    describe "#sort" do
+      it "returns the groups sorted by name" do
+        expect(subject.sort.map(&:name)).to eq(['BlueStrip on 0', 'Deep Sea off 0'])
       end
     end
   end
