@@ -2,6 +2,9 @@ module Hue
   module Client
     module Models
       class PortalState
+        # Creates an instance of the PortalStaste object
+        #
+        # @return [Hue::Client::Models::PortalState] Self
         def initialize(attributes={})
           @attributes = attributes
         end
