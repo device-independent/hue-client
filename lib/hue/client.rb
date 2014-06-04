@@ -24,6 +24,7 @@ require 'hue/client/models/group_action'
 require 'hue/client/models/group'
 require 'hue/client/models/groups'
 
+require 'hue/client/models/schedule'
 
 module Hue
   module Client
