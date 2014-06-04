@@ -30,6 +30,9 @@ require 'hue/client/models/groups'
 
 require 'hue/client/models/schedule'
 
+require 'hue/client/models/whitelist_user'
+require 'hue/client/models/whitelist_users'
+
 module Hue
   module Client
     def self.routes
