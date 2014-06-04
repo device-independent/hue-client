@@ -55,8 +55,8 @@ describe Hue::Client::Models::LightState do
       expect(subject.xy).to eq([0.5, 0.5])
     end
 
-    it "returns the #color_mode" do
-      expect(subject.color_mode).to eq('hs')
+    it "returns a ColorMode instance for #color_mode" do
+      expect(subject.color_mode).to be_a(Hue::Client::Models::ColorMode)
     end
   end
 
@@ -99,8 +99,8 @@ describe Hue::Client::Models::LightState do
       expect(subject.xy).to eq([0.0, 0.0])
     end
 
-    it "returns the #color_mode" do
-      expect(subject.color_mode).to eq(nil)
+    it "returns a ColorMode instance for #color_mode" do
+      expect(subject.color_mode).to be_a(Hue::Client::Models::ColorMode)
     end
   end
 end

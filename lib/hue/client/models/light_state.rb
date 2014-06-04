@@ -1,3 +1,5 @@
+require File.expand_path('../color_mode', __FILE__)
+
 module Hue
   module Client
     module Models
@@ -77,7 +79,8 @@ module Hue
         # @return [String] String representation of the color mode
         def colormode
           # TODO: Return a ColorMode object
-          @attributes.fetch('colormode', nil)
+          mode_value = @attributes.fetch('colormode', nil)
+          ColorMode.new(mode_value)
         end
         alias :color_mode :colormode
       end
