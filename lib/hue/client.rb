@@ -3,8 +3,8 @@ require 'restless_router'
 
 require "hue/client/version"
 
-require "hue/client/core_extension"
-require "hue/client/core_extension/time"
+require "hue/core_extension"
+require "hue/core_extension/time"
 
 require 'hue/client/models/portal_state'
 require 'hue/client/models/software_update'
