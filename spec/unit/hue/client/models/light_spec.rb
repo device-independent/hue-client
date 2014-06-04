@@ -56,6 +56,10 @@ describe Hue::Client::Models::Light do
       expect(subject.software_version).to eq('1.0.3')
     end
 
+    it "returns a LightState instance for #state" do
+      expect(subject.state).to be_a(Hue::Client::Models::LightState)
+    end
+
     context "state delegation" do
       it "delegates the #brightness to the #state" do
         expect(subject.brightness).to eq(200)
