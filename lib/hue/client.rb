@@ -3,6 +3,7 @@ require 'restless_router'
 require "hue/client/version"
 
 require 'hue/client/configuration'
+require 'hue/client/connection'
 
 module Hue
   module Client
