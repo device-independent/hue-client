@@ -7,6 +7,9 @@ require 'hue/client/connection'
 
 require 'hue/client/models'
 
+require 'hue/client/models/bridges'
+require 'hue/client/models/bridge'
+
 module Hue
   module Client
     def self.routes
