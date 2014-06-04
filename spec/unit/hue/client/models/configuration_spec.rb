@@ -33,7 +33,7 @@ describe Hue::Client::Models::Configuration do
       "apiversion"=> "1.2.1",
       "proxyaddress"=> "none",
       "mac"=> "00:17:88:00:00:00",
-      "linkbutton"=> false,
+      "linkbutton"=> true,
       "ipaddress"=> "192.168.1.100",
       "netmask"=> "255.255.0.0",
       "gateway"=> "192.168.0.1",
@@ -118,6 +118,102 @@ describe Hue::Client::Models::Configuration do
 
     it "returns true for the #dhcp status" do
       expect(subject).to be_dhcp
+    end
+
+    it "returns the #link_button status" do
+      expect(subject.link_button).to be(true)
+    end
+
+    it "returns true for #link_button?" do
+      expect(subject.link_button?).to be(true)
+    end
+  end
+
+  context "without values" do
+    let(:attributes) { {} }
+
+    it "returns an instance of PortalState for #portal_state" do
+      expect(subject.portal_state).to be_a(Hue::Client::Models::PortalState)
+    end
+
+    it "returns an instance of SoftwareUpdate for #software_update" do
+      expect(subject.software_update).to be_a(Hue::Client::Models::SoftwareUpdate)
+    end
+
+    it "returns an instance of WhitelistUsers for #whitelist_users" do
+      expect(subject.whitelist_users).to be_a(Hue::Client::Models::WhitelistUsers)
+    end
+
+    it "returns the #portal_connection" do
+      expect(subject.portal_connection).to eq('disconnected')
+    end
+
+    it "returns the #portal_services" do
+      expect(subject.portal_services).to be(false)
+    end
+
+    it "returns the #proxy_port" do
+      expect(subject.proxy_port).to eq(0)
+    end
+
+    it "returns the #proxy_address" do
+      expect(subject.proxy_address).to eq('none')
+    end
+
+    it "returns the time in UTC" do
+      expect(subject.utc).to be_nil
+    end
+
+    it "returns the #name" do
+      expect(subject.name).to be_nil
+    end
+
+    it "returns the #timezone" do
+      expect(subject.timezone).to be_nil
+    end
+
+    it "returns the #local_time" do
+      expect(subject.local_time).to be_nil
+    end
+
+    it "returns the #software_version" do
+      expect(subject.software_version).to be_nil
+    end
+
+    it "returns the #api_version" do
+      expect(subject.api_version).to be_nil
+    end
+
+    it "returns the #mac_address" do
+      expect(subject.mac_address).to be_nil
+    end
+
+    it "returns the #ip_address" do
+      expect(subject.ip_address).to be_nil
+    end
+
+    it "returns the #netmask" do
+      expect(subject.netmask).to be_nil
+    end
+
+    it "returns the #gateway" do
+      expect(subject.gateway).to be_nil
+    end
+
+    it "returns the #dhcp status" do
+      expect(subject.dhcp).to be(false)
+    end
+
+    it "returns false for the #dhcp status" do
+      expect(subject).to_not be_dhcp
+    end
+
+    it "returns the #link_button status" do
+      expect(subject.link_button).to be(false)
+    end
+
+    it "returns false for #link_button?" do
+      expect(subject.link_button?).to be(false)
     end
   end
 end

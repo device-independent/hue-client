@@ -36,7 +36,7 @@ module Hue
 
         # @return [String]
         def portalconnection
-          @attributes.fetch('portalconnection', nil)
+          @attributes.fetch('portalconnection', 'disconnected')
         end
         alias :portal_connection :portalconnection
 
@@ -144,6 +144,12 @@ module Hue
           @attributes.fetch('apiversion', nil)
         end
         alias :api_version :apiversion
+
+        def linkbutton
+          @attributes.fetch('linkbutton', false)
+        end
+        alias :link_button :linkbutton
+        alias :link_button? :linkbutton
       end
     end
   end
