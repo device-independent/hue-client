@@ -2,6 +2,9 @@ require 'restless_router'
 
 require "hue/client/version"
 
+require "hue/client/core_extension"
+require "hue/client/core_extension/time"
+
 require 'hue/client/configuration'
 require 'hue/client/connection'
 
@@ -20,6 +23,7 @@ require 'hue/client/models/group_action'
 
 require 'hue/client/models/group'
 require 'hue/client/models/groups'
+
 
 module Hue
   module Client
