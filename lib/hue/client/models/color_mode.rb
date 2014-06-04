@@ -12,6 +12,9 @@ module Hue
           @name = name
         end
 
+        # Returns the human name description from the `mapping`
+        #
+        # @return [String] Description of the name
         def description
           if mapping.has_key?(self.name)
             mapping[self.name]
