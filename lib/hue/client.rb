@@ -39,6 +39,8 @@ require 'hue/client/models/whitelist_users'
 require 'hue/client/models/scene'
 require 'hue/client/models/scenes'
 
+require 'hue/client/models/data_store'
+
 module Hue
   module Client
     def self.routes
