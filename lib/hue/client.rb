@@ -10,6 +10,8 @@ require 'hue/client/models'
 require 'hue/client/models/bridges'
 require 'hue/client/models/bridge'
 
+require 'hue/client/models/light_state'
+
 module Hue
   module Client
     def self.routes
