@@ -6,6 +6,7 @@ require "hue/client/core_extension"
 require "hue/client/core_extension/time"
 
 require 'hue/client/models/portal_state'
+require 'hue/client/models/software_update'
 
 require 'hue/client/configuration'
 require 'hue/client/connection'
