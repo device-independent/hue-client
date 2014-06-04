@@ -33,4 +33,28 @@ describe Hue::Client::Models::SoftwareUpdate do
       expect(subject).to be_notify
     end
   end
+
+  context "without values" do
+    let(:attributes) { {} }
+
+    it "returns the #update_state" do
+      expect(subject.update_state).to eq(0)
+    end
+
+    it "returns the #url with the update notes" do
+      expect(subject.url).to be_nil
+    end
+
+    it "returns the #text description of the update" do
+      expect(subject.text).to be_nil
+    end
+
+    it "returns the #notify status" do
+      expect(subject.notify).to be(false)
+    end
+
+    it "returns false for #notify?" do
+      expect(subject).to_not be_notify
+    end
+  end
 end
