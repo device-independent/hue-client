@@ -19,6 +19,7 @@ require 'hue/client/models/lights'
 require 'hue/client/models/group_action'
 
 require 'hue/client/models/group'
+require 'hue/client/models/groups'
 
 module Hue
   module Client
