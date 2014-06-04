@@ -2,6 +2,8 @@ require 'restless_router'
 
 require "hue/client/version"
 
+require 'hue/client/configuration'
+
 module Hue
   module Client
     def self.routes
