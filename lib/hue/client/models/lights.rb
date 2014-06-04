@@ -6,6 +6,10 @@ module Hue
       class Lights
         include Enumerable
 
+        # Create a new instance of the Lights
+        # collection.
+        #
+        # @return [Hue::Client::Models::Lights] Self
         def initialize(attributes={})
           @attributes = attributes
         end
@@ -14,6 +18,9 @@ module Hue
           lights_collection.each(&block)
         end
 
+        # Find the light by the identifier
+        #
+        # @return [Hue::Client::Models::Light, nil] Light or nil
         def find_by_id(id)
           self.select { |record| record.id == id.to_s }.first
         end
