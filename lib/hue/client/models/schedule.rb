@@ -1,3 +1,4 @@
+require 'time'
 require File.expand_path('../../../core_extension/time', __FILE__)
 
 module Hue
