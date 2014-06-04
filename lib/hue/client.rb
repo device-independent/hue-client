@@ -37,6 +37,7 @@ require 'hue/client/models/whitelist_user'
 require 'hue/client/models/whitelist_users'
 
 require 'hue/client/models/scene'
+require 'hue/client/models/scenes'
 
 module Hue
   module Client
