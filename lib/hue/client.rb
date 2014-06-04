@@ -18,6 +18,8 @@ require 'hue/client/models/lights'
 
 require 'hue/client/models/group_action'
 
+require 'hue/client/models/group'
+
 module Hue
   module Client
     def self.routes
