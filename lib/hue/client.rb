@@ -14,6 +14,7 @@ require 'hue/client/models/color_mode'
 require 'hue/client/models/light_state'
 
 require 'hue/client/models/light'
+require 'hue/client/models/lights'
 
 module Hue
   module Client
