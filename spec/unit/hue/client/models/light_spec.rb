@@ -98,4 +98,70 @@ describe Hue::Client::Models::Light do
       end
     end
   end
+
+  context "without values" do
+    let(:attributes) { {} }
+
+    it "returns the #id" do
+      expect(subject.id).to be_nil
+    end
+
+    it "returns the #name" do
+      expect(subject.name).to be_nil
+    end
+
+    it "returns the #type" do
+      expect(subject.type).to be_nil
+    end
+
+    it "returns the #model_id" do
+      expect(subject.model_id).to be_nil
+    end
+
+    it "returns the #software_version" do
+      expect(subject.software_version).to be_nil
+    end
+
+    it "returns a LightState instance for #state" do
+      expect(subject.state).to be_a(Hue::Client::Models::LightState)
+    end
+
+    context "state delegation" do
+      it "delegates the #brightness to the #state" do
+        expect(subject.brightness).to eq(0)
+      end
+
+      it "delegates the #saturation to the #state" do
+        expect(subject.saturation).to eq(0)
+      end
+
+      it "delegates the #color_mode to the #state" do
+        expect(subject.color_mode).to be_a(Hue::Client::Models::ColorMode)
+      end
+
+      it "delegates the #color_temperature to the #state" do
+        expect(subject.color_temperature).to eq(0)
+      end
+
+      it "delegates the #hue to the #state" do
+        expect(subject.hue).to eq(0)
+      end
+
+      it "delegates the #on status to the #state" do
+        expect(subject.on).to eq(false)
+      end
+
+      it "delegates the #on? status to the #state" do
+        expect(subject).to_not be_on
+      end
+
+      it "delegates the #reachable status to the #state" do
+        expect(subject.reachable).to eq(false)
+      end
+
+      it "delegates the #reachable? status to the #state" do
+        expect(subject).to_not be_reachable
+      end
+    end
+  end
 end
