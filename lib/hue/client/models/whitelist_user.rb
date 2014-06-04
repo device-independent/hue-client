@@ -69,6 +69,7 @@ module Hue
             nil
           end
         end
+        alias :updated_at :last_used_at
       end
     end
   end
