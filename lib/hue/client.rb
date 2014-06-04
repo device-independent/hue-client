@@ -7,12 +7,13 @@ require 'hue/client/connection'
 
 require 'hue/client/models'
 
-require 'hue/client/models/bridges'
 require 'hue/client/models/bridge'
+require 'hue/client/models/bridges'
 
 require 'hue/client/models/color_mode'
 require 'hue/client/models/light_state'
 
+require 'hue/client/models/light'
 
 module Hue
   module Client
