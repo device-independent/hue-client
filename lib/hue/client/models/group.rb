@@ -5,6 +5,7 @@ module Hue
   module Client
     module Models
       class Group
+        include Comparable
         extend Forwardable
 
         #Delegate the action methods to the GroupAction object
@@ -23,6 +24,13 @@ module Hue
         # @return [Hue::Client::Models::Group] Self
         def initialize(attributes={})
           @attributes = attributes
+        end
+
+        # Enable sorting and comparison
+        #
+        # @return [Hue::Client::Models::Group] Sorted instance
+        def <=>(other)
+          self.name <=> other.name
         end
 
         # Returns the ID of the group
