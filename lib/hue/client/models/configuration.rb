@@ -33,6 +33,7 @@ module Hue
         def whitelist_users
           WhitelistUsers.new(@attributes.fetch('whitelist', {}))
         end
+        alias :users :whitelist_users
 
         # @return [String]
         def portalconnection
