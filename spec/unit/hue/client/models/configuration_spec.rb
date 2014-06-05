@@ -88,6 +88,11 @@ describe Hue::Client::Models::Configuration do
       expect(subject.local_time).to eq('2014-06-04T14:05:24')
     end
 
+    it "returns the #current_time from #local_time" do
+      expected = Time.parse('2014-06-04T14:05:24')
+      expect(subject.current_time).to eq(expected)
+    end
+
     it "returns the #software_version" do
       expect(subject.software_version).to eq('01003542')
     end

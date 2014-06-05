@@ -130,6 +130,17 @@ module Hue
         end
         alias :local_time :localtime
 
+        # Return the local time as DateTime
+        #
+        # @return [DateTime] DateTime object
+        def current_time
+          begin
+            Time.parse(self.localtime)
+          rescue
+            nil
+          end
+        end
+
         # Return the version of the software on the bridge
         #
         # @return [String] Software version
