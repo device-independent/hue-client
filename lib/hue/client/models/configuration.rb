@@ -35,6 +35,14 @@ module Hue
         end
         alias :users :whitelist_users
 
+        # Query method for Whitelist Users
+        #
+        # @return [Boolean] Users query method response
+        def whitelist_users?
+          self.whitelist_users.any?
+        end
+        alias :users? :whitelist_users?
+
         # @return [String]
         def portalconnection
           @attributes.fetch('portalconnection', 'disconnected')

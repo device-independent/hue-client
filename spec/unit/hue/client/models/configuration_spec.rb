@@ -56,6 +56,10 @@ describe Hue::Client::Models::Configuration do
       expect(subject.whitelist_users).to be_a(Hue::Client::Models::WhitelistUsers)
     end
 
+    it "returns true for #whitelist_users?" do
+      expect(subject.whitelist_users?).to be(true)
+    end
+
     it "returns the #portal_connection" do
       expect(subject.portal_connection).to eq('connected')
     end
@@ -147,6 +151,10 @@ describe Hue::Client::Models::Configuration do
 
     it "returns an instance of WhitelistUsers for #whitelist_users" do
       expect(subject.whitelist_users).to be_a(Hue::Client::Models::WhitelistUsers)
+    end
+
+    it "returns false for #whitelist_users?" do
+      expect(subject.whitelist_users?).to be(false)
     end
 
     it "returns the #portal_connection" do
