@@ -1,6 +1,7 @@
 require File.expand_path('../../../../../../lib/hue/client/models/schedule', __FILE__)
 
 describe Hue::Client::Models::Schedule do
+  let(:current_time) { Time.now }
   let(:attributes) do
     {
       "id" => "1207463055331812",
@@ -40,7 +41,7 @@ describe Hue::Client::Models::Schedule do
     end
 
     it "returns the #trigger_at timestamp" do
-      expected = Time.local(2014, 6, 4, 10, 55, 0)
+      expected = Time.local(current_time.year, current_time.month, current_time.day, 10, 55, 0)
       expect(subject.trigger_at).to eq(expected)
     end
 
@@ -49,7 +50,7 @@ describe Hue::Client::Models::Schedule do
     end
 
     it "returns the #local_trigger_at" do
-      expected = Time.local(2014, 6, 4, 6, 55, 0)
+      expected = Time.local(current_time.year, current_time.month, current_time.day, 6, 55, 0)
       expect(subject.local_trigger_at).to eq(expected)
     end
 
