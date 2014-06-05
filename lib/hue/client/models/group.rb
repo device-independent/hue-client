@@ -54,6 +54,9 @@ module Hue
           @attributes.fetch('lights', [])
         end
 
+        # Return the GroupAction object
+        #
+        # @return [Hue::Client::Models::GroupAction]
         def action
           @action ||= GroupAction.new(@attributes.fetch('action', {}))
         end
