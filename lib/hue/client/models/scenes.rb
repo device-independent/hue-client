@@ -28,6 +28,13 @@ module Hue
           self.select { |record| record.id == id.to_s }.first
         end
 
+        # Find all scenes with the specified Light ID
+        #
+        # @return [Array] Scenes
+        def find_by_light_id(id)
+          self.select { |record| record.light_ids.include?(id.to_s) }
+        end
+
         private
         def scenes_collection
           @attributes.map do |k,v|
